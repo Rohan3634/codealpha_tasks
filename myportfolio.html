@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: hsl(194, 77%, 64%);
+    }
+
+    header {
+      background-color: #444;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills-list li {
+      background: #e0e0e0;
+      padding: 8px 15px;
+      border-radius: 5px;
+    }
+
+    .project {
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hi, I'm Rohan Kumar Rout</h1>
+   
+    <p>Frontend Developer | Web Designer | Creative Thinker</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+
+    <h2>About Me</h2>
+    <h4>Name=Rohan Kumar Rout</h4>
+   <h4>Age=18</h4>
+   <h4>gender=male</h4> 
+    <p>I am a passionate frontend developer with experience in HTML, CSS, JavaScript, and modern frameworks. I love building beautiful and responsive websites. And have an experience of internship in CODEALPHA.
+        I lives in Bhubaneswar,odisha and currently studing in GEC Autonomous college,Bhubaneswar as a B.Tech CSE student
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Git & GitHub</li>
+      <li>java</li>
+      <li>c</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Calculator App</h3>
+      <p>A simple calculator built using HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project">
+      <h3>Image Gallery</h3>
+      <p>A responsive gallery with navigation and lightbox functionality.</p>
+    </div>
+    <div class="project">
+        <h3>Portfolio site</h3>
+        <p>This my portfoliosite showcasing my skills,work experience and my current status.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return submitForm();">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Rohan Kumar Rout. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function submitForm() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        alert("Please fill out all fields.");
+        return false;
+      }
+
+      alert('Thank you,  Your message has been sent.');
+      return false; // Prevent actual form submission
+    }
+  </script>
+</body>
+</html>
